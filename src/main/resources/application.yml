@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: log-practice
+eureka:
+  instance:
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 2
+    lease-expiration-duration-in-seconds: 3
+  client:
+    service-url:
+      defaultZone: http://dev.ufotosoft.com:8093/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
